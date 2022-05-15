@@ -1,0 +1,325 @@
+/* geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+
+    /* background-color: rgb(247, 247, 247); */
+    color: rgb(43, 43, 43);
+
+}
+
+/* corpo */
+body { 
+    background-color: #efefef;
+}
+
+/* cabeÃ§alho */
+header {
+    display: flex;
+    margin: 0 0 10px 0;
+    padding: 20px;
+    justify-content:space-around;
+    align-items: center;
+}
+
+/* logo */
+header div img {
+    width: 10%;
+}
+
+/* resetando links */
+a {
+    text-decoration: none;
+}
+
+/* menu */
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+/* itens menu */
+header ul li {
+    list-style: none;
+    display: flex;
+}
+
+/* links menu */
+header ul a {
+    display: flex;
+    padding: 20px;
+}
+
+header ul a:hover {
+    color: #7183d9;
+    transition: 400ms;
+}
+
+/* main */
+.containermain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#imgcover {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    margin: 0 0 0 10%;
+}
+
+/* caixa de perfil */
+.containerprofile {
+    margin: 0 5% 0 5%;
+    text-align: center;
+    padding: 35px 10px 35px 10px;
+    width: 31%;
+
+    border-radius: 35px;
+    background: #f3f3f3;
+    box-shadow:  13px 13px 26px #dcdcdc,
+                    -13px -13px 26px #ffffff;
+
+} 
+
+.containerprofile .profile h1 {
+    font-size: 33px;
+}
+
+.containerprofile .profile h5 {
+    font-size: 20px;
+    margin: -10px 0 0 0;
+}
+
+/* seta */
+ #arrow {
+     font-size: 25px;
+     cursor: pointer;
+    /* animation: blink 2s steps(5, start) infinite; */
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }    
+}
+
+#animation {
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+/* sobre */
+.active {
+   display: block !important;
+}
+
+/* biografia */
+#about p {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    padding: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* formulario */
+.form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* frase "me manda um email! */
+.form p{
+    font-size: 13px;
+    margin: 5px 0 5px 0;
+}
+
+/* campo de email */
+/* .form input{
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 1px rgb(218, 218, 218);
+} */
+
+#email {
+    width: 70%;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+    border: solid 1px rgb(218, 218, 218);
+}
+
+#mensagem {
+    width: 70%;
+    height: 80px;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-radius: 5px;
+    border: solid 1px rgb(218, 218, 218);
+}
+
+textarea {
+    resize: none;
+  }
+
+
+/* botao */
+/* .form button{
+    cursor: pointer;
+    margin: 5px 0 0 0;
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    color: #efefef;
+    background-color: #7183d9; */
+/* } */
+
+/* .form button:hover {
+    background-color: #f46a8c;
+    transition: 200ms;
+} */
+    
+/* botÃ£o gradiente*/
+#button{
+    cursor: pointer;
+    margin: 2px 0 0 0;
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    color: #efefef;
+    background: linear-gradient(to right, #f46a8c 50%, #7183d9 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+#button:hover {
+    background-position: left;
+    transition: 600ms;
+}
+
+/* rodape da pagina */
+footer {
+    display: grid;
+    font-size: 12px;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 20px 12.5% 30px 11%;
+}
+
+.partners {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+/* responsividade */
+
+    /* menu */
+    @media only screen and (max-width: 480px) {
+        header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header div img {
+            margin-bottom: 10px;
+        }
+        
+    }
+
+    /* caixa de perfil */
+    @media only screen and (max-width: 480px) {
+        .containermain {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 8% 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .containerprofile {
+            margin: 10% 2% 0 10%;
+            text-align: center;
+            padding: 30px;
+            max-width: 90%;
+            height: 100%;
+        
+            border-radius: 35px;
+            background: #f3f3f3;
+            box-shadow:  13px 13px 26px #dcdcdc,
+                            -13px -13px 26px #ffffff;
+        
+        } 
+        
+        .containerprofile .profile h1 {
+            font-size: 20px;
+        }
+        
+        .containerprofile .profile h5 {
+            font-size: 14px;
+        }
+
+    /* biografia */
+        #about p {
+            display: flex;
+            justify-content: center;
+            text-align: justify;
+            padding: 15px;
+            max-width: 300px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+        
+    /* formulario */
+        .form {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+    /* frase "me manda um email! */
+        .form p{
+            font-size: 10px;
+            margin: 5px 0 10px 0;
+        }
+
+    /* campo de email */
+        .form input{
+            width: 70%;
+            height: 50px;
+            font-size: 10px;
+            text-align: center;
+            border-radius: 5px;
+            border: solid 1px rgb(218, 218, 218);
+        }
+        
+    /* botÃ£o */
+        .form button{
+            font-size: 10px;
+        }
+        
+    }
